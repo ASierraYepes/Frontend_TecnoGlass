@@ -9,6 +9,7 @@ import { PeliculasServices } from './peliculas/peliculas.service';
 })
 export class AppComponent {
   peliculas:any;
+  search: string = '';
 
   constructor(public pelicula:PeliculasServices){}
 
@@ -18,4 +19,8 @@ export class AppComponent {
       (err) => { console.error(err) }
     )
   }
+
+  onSearchPelicula( search: string ) {
+    this.search = search;
+    console.log(sea)
 }
