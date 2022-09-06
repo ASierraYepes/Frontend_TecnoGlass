@@ -14,7 +14,7 @@ export class AppComponent {
 
   ngOnInit(){
     this.pelicula.getPeliculas().subscribe(
-      (res) => { this.peliculas = res; console.log(res) },
+      (res) => { this.peliculas = res.results; console.log(res) },
       (err) => { console.error(err) }
     )
   }

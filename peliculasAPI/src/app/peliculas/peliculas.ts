@@ -1,6 +1,6 @@
 export class Peliculas {
-    public Title: String = " ";
-    public Year: string = " ";
+    public page: String = " ";
+    public Year: Array<any> = [];
     public Genre: String = " ";
     public Director: String = " ";
 }

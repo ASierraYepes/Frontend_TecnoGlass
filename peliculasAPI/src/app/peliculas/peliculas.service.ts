@@ -6,7 +6,9 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 
 export class PeliculasServices{
-    private API = "https://www.omdbapi.com/?i=tt3896198&apikey=d441edc6";
+    apikey = "e85d4acaaf0509619d24a93d6b380cfa"
+
+    private API = "https://api.themoviedb.org/3/movie/now_playing?api_key="+this.apikey+"&language=en-US&page=1";
 
     constructor(public http:HttpClient) {}
 
