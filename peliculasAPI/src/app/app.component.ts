@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PeliculasServices } from './peliculas/peliculas.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'peliculasAPI';
+  peliculas:any;
+
+  constructor(public pelicula:PeliculasServices){}
+
+  ngOnInit(){
+    this.pelicula.getPeliculas().subscribe(
+      (res) => { this.peliculas = res; console.log(res) },
+      (err) => { console.error(err) }
+    )
+  }
 }
