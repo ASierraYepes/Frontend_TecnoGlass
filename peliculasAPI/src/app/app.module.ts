@@ -3,14 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PeliculasComponent } from './peliculas/peliculas.component';
 import { PeliculasServices } from './services/peliculas.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PeliculasComponent
+
   ],
   imports: [
     BrowserModule,
