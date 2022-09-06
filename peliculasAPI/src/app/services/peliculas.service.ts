@@ -18,7 +18,7 @@ export class PeliculasServices{
         return this.http.get(this.API);
     } 
 
-    public getFilterPeliculas(filtro:string):Observable<any> {  //CONSUMI API FILTRO
+    public getFilterPeliculas(filtro:string):Observable<any> {  //CONSUMIR API FILTRO
         if (filtro==""){
             return this.http.get(this.API);
         }else{
