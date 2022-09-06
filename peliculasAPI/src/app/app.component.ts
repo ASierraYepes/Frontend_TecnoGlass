@@ -15,12 +15,13 @@ export class AppComponent {
 
   ngOnInit(){
     this.pelicula.getPeliculas().subscribe(
-      (res) => { this.peliculas = res.results; console.log(res) },
+      (res) => { this.peliculas = res.results; },
       (err) => { console.error(err) }
     )
   }
 
   onSearchPelicula( search: string ) {
     this.search = search;
-    console.log(sea)
+    console.log(search)
+  }
 }
